@@ -1,0 +1,153 @@
+:root {
+  --background-color1: #4b167e;
+  --background-color2: linear-gradient(62deg, #000000 0%, #282a3a 100%);
+  --background-color3: #4b167e;
+  --background-color4: #282a3a;
+  --font-color1: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: var(--font-color1);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  margin: 0.8vw;
+  font-size: 2.3rem;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2.6rem;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid var(--font-color1);
+}
+
+.subtitle {
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BARRA DE NAVEGAÇÃO*/
+.nav {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--background-color1);
+  height: 10vh;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  list-style: none;
+  margin: 1rem;
+}
+
+#itens {
+  width: 7vw;
+  border-right: 1px solid var(--font-color1);
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+#itens:last-of-type {
+  border-right: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: var(--font-color1);
+}
+
+/* FIM DA BARRA DE NAVEGAÇÃO*/
+
+#welcome-section {
+  width: 100%;
+  background: var(--background-color2);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects {
+  width: 100%;
+  height: 120vh;
+  background-color: var(--background-color3);
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color4);
+}
+
+.media {
+  display: flex;
+  margin: 6vh;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 2vw;
+}
+
+.projectsimg {
+  max-width: 30vw;
+  /*clip-path: inset(10% 20%);*/
+}
+
+.social-media {
+  font-size: 1.6rem;
+  margin: 0 2vw;
+  cursor: pointer;
+}
+
+.social-media:hover {
+  color: #4b167e;
+}
+
+@media only screen and (max-width: 660px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 395px) {
+  html {
+    font-size: 8px;
+  }
+}
