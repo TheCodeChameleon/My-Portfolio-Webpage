@@ -196,6 +196,14 @@ figcaption {
   html {
     font-size: 10px;
   }
+  .project-tile {
+    filter: none;
+  }
+  .project-tile:hover {
+    transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+  }
 }
 @media only screen and (max-width: 395px) {
   html {
