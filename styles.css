@@ -153,6 +153,17 @@ h2 {
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.project-tile:hover {
+  filter: none;
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
 }
 
 .project-tile a {
@@ -174,10 +185,13 @@ figcaption {
   cursor: pointer;
   color: var(--font-color1);
   text-decoration: none;
+  display: inline-block;
 }
 
 .social-media a:hover {
-  color: #4b167e;
+  transform: translateY(0.2rem);
+  transition: transform 0.2s;
+  color: #fff;
 }
 
 @media only screen and (max-width: 660px) {
