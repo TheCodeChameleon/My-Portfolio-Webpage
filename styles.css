@@ -204,6 +204,9 @@ figcaption {
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
   }
+  .social-media a:hover {
+    transform: translateY(0);
+  }
 }
 @media only screen and (max-width: 395px) {
   html {
