@@ -45,6 +45,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4%;
 }
 
 /* BARRA DE NAVEGAÇÃO*/
@@ -132,31 +133,23 @@ h2 {
 }
 
 .projectsimg {
-  width: max(80%, 20px);
+  width: 100%;
   height: max(80%, 20px);
   object-fit: cover;
   object-position: center;
-  border-radius: 3%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .project-tile {
   background-color: var(--font-color1);
-  padding: 2rem;
-  padding-bottom: 3rem;
   width: 20vw;
-  height: 100%;
+  padding-bottom: max(10%, 23px);
   margin: 0 auto;
-  border-radius: 8%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   filter: grayscale(1);
   object-fit: cover;
   transition: 0.3s;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .project-tile:hover {
@@ -171,7 +164,7 @@ h2 {
 }
 
 figcaption {
-  font-size: max(1rem, 8px);
+  font-size: max(1.3rem, 8px);
   color: var(--background-color4);
   text-decoration: none;
   font-weight: bold;
