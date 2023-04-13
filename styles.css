@@ -52,13 +52,14 @@ h2 {
 
 /* BARRA DE NAVEGAÇÃO*/
 .nav {
-  position: sticky;
+  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background: var(--background-color1);
   height: 13vh;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -95,14 +96,17 @@ h2 {
   color: var(--font-color1);
 }
 
+.imglogo {
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
 #logo {
   width: 100px;
-  max-width: 200px;
-  position: fixed;
-  top: 10px;
-  left: 30px;
   filter: invert(90%);
-  object-fit: cover;
 }
 
 /* FIM DA BARRA DE NAVEGAÇÃO*/
@@ -180,7 +184,7 @@ h2 {
 }
 
 figcaption {
-  font-size: max(1.3rem, 8px);
+  font-size: 100%;
   color: var(--background-color4);
   text-decoration: none;
   font-weight: bold;
@@ -216,7 +220,7 @@ figcaption {
   background-color: var(--button-color1);
   color: white;
   border: 1px solid var(--button-color2);
-  border-radius: 5%;
+  border-radius: 15%;
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -245,25 +249,16 @@ figcaption {
   html {
     font-size: 13px;
   }
-
-  figcaption {
-    font-size: 17px;
-  }
 }
 @media only screen and (max-width: 660px) {
   html {
     font-size: 13px;
   }
-  figcaption {
-    font-size: 15px;
-  }
+
   .emailsec {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  #logo {
-    width: 80px;
   }
 }
 @media only screen and (max-width: 530px) {
@@ -290,9 +285,7 @@ figcaption {
   #botao-copiar:active {
     transform: scale(0) translateY(10px);
   }
-  figcaption {
-    font-size: 13px;
-  }
+
   #itens {
     border: none;
   }
@@ -302,9 +295,6 @@ figcaption {
     font-size: 8px;
   }
 
-  #logo {
-    top: 20px;
-  }
   #botao-copiar {
     font-size: 0.6rem;
     display: flex;
@@ -312,32 +302,29 @@ figcaption {
     align-items: center;
   }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 410px) {
   html {
     font-size: 8px;
   }
 
   .nav {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+  }
+  #logo {
+    width: 70px;
   }
   #navbar {
     height: 50%;
-    top: 80px;
+    top: 70px;
     font-size: 17px;
+    right: 0;
+    left: 0;
   }
-
-  #itens {
-    border: none;
-  }
-
-  #logo {
-    left: 30%;
-  }
-
   h2 {
-    font-size: 13px;
+    font-size: 17px;
   }
 }
