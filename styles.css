@@ -6,6 +6,8 @@
   --background-color3: #4b167e;
   --background-color4: #282a3a;
   --font-color1: #fff;
+  --button-color1: #413f42;
+  --button-color2: #313131e5;
 }
 
 * {
@@ -55,8 +57,10 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
   background: var(--background-color1);
-  height: 10vh;
+  height: 13vh;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -66,13 +70,15 @@ h2 {
   display: flex;
   flex-direction: row;
   position: absolute;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   top: 5%;
   right: 2vw;
   list-style: none;
 }
 
 #itens {
-  margin-top: 15px;
   margin-left: 6px;
   margin-right: 6px;
   width: 8rem;
@@ -87,6 +93,16 @@ h2 {
 #navbar a {
   text-decoration: none;
   color: var(--font-color1);
+}
+
+#logo {
+  width: 100px;
+  max-width: 200px;
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  filter: invert(90%);
+  object-fit: cover;
 }
 
 /* FIM DA BARRA DE NAVEGAÇÃO*/
@@ -187,9 +203,67 @@ figcaption {
   color: #fff;
 }
 
+.email {
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.emailsec {
+  display: flex;
+}
+
+#botao-copiar {
+  background-color: var(--button-color1);
+  color: white;
+  border: 1px solid var(--button-color2);
+  border-radius: 5%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.8rem;
+  transform: translateY(10px);
+}
+
+#botao-copiar:hover {
+  background-color: var(--font-color1);
+  color: var(--button-color1);
+  border: 1px solid var(--button-color1);
+}
+
+#botao-copiar:active {
+  transform: scale(0.9) translateY(10px);
+  transition: linear 0.1ms;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1050px) {
+  html {
+    font-size: 13px;
+  }
+
+  figcaption {
+    font-size: 17px;
+  }
+}
 @media only screen and (max-width: 660px) {
   html {
     font-size: 13px;
+  }
+  figcaption {
+    font-size: 15px;
+  }
+  .emailsec {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo {
+    width: 80px;
   }
 }
 @media only screen and (max-width: 530px) {
@@ -207,9 +281,60 @@ figcaption {
   .social-media a:hover {
     transform: translateY(0);
   }
+  #botao-copiar:hover {
+    background-color: var(--button-color1);
+    color: var(--font-color1);
+    border: 1px solid var(--button-color1);
+  }
+
+  #botao-copiar:active {
+    transform: scale(0) translateY(10px);
+  }
+  figcaption {
+    font-size: 13px;
+  }
 }
 @media only screen and (max-width: 395px) {
   html {
     font-size: 8px;
+  }
+
+  #logo {
+    top: 20px;
+  }
+  #botao-copiar {
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 8px;
+  }
+
+  .nav {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 150px;
+  }
+  #navbar {
+    height: 50%;
+    top: 80px;
+    font-size: 17px;
+  }
+
+  #itens {
+    border: none;
+  }
+
+  #logo {
+    left: 30%;
+  }
+
+  h2 {
+    font-size: 13px;
   }
 }
