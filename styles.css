@@ -293,6 +293,9 @@ figcaption {
   figcaption {
     font-size: 13px;
   }
+  #itens {
+    border: none;
+  }
 }
 @media only screen and (max-width: 395px) {
   html {
