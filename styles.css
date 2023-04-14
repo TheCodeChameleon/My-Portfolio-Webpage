@@ -105,7 +105,7 @@ h2 {
 }
 
 #logo {
-  width: 100px;
+  max-width: 100px;
   filter: invert(90%);
 }
 
@@ -315,7 +315,7 @@ figcaption {
     height: 115px;
   }
   #logo {
-    width: 70px;
+    max-width: 70px;
   }
   #navbar {
     height: 50%;
@@ -326,5 +326,24 @@ figcaption {
   }
   h2 {
     font-size: 17px;
+  }
+}
+
+@media only screen and (max-height: 570px) {
+  #logo {
+    width: auto;
+    max-height: 60px;
+  }
+}
+@media only screen and (max-height: 490px) {
+  #logo {
+    width: auto;
+    max-height: 45px;
+  }
+}
+@media only screen and (max-height: 360px) {
+  #logo {
+    width: auto;
+    max-height: 38px;
   }
 }
