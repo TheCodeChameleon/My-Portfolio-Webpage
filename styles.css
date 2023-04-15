@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --background-color1: #4b167e;
@@ -39,6 +39,10 @@ h2 {
   padding-bottom: 2vh;
   border-bottom: 1px solid var(--font-color1);
   font-family: "Poppins";
+}
+
+.main-title {
+  font-family: Poppins;
 }
 
 .subtitle {
@@ -98,7 +102,7 @@ h2 {
 
 .imglogo {
   text-align: center;
-  width: 200px;
+  width: 180px;
   height: 80px;
   padding-top: 5px;
   padding-right: 10px;
@@ -269,9 +273,9 @@ figcaption {
     filter: none;
   }
   .project-tile:hover {
-    transform: scale(0);
-    -ms-transform: scale(0);
-    -webkit-transform: scale(0);
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
   }
   .social-media a:hover {
     transform: translateY(0);
@@ -307,25 +311,35 @@ figcaption {
     font-size: 8px;
   }
 
-  .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 115px;
+  .imglogo {
+    width: 100px;
+    margin-left: 10px;
   }
+
   #logo {
-    max-width: 70px;
+    width: 90px;
   }
-  #navbar {
-    height: 50%;
-    top: 70px;
-    font-size: 17px;
-    right: 0;
-    left: 0;
-  }
+
   h2 {
     font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  html {
+    font-size: 8px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #navbar {
+    right: 10vw;
+  }
+
+  h2 {
+    font-size: 16px;
   }
 }
 
