@@ -2,6 +2,7 @@ const fullName = document.querySelector(".main-title");
 const nameComplete = fullName.innerHTML;
 fullName.innerHTML = "";
 
+//TypeWriter function
 function TypeWriter(name) {
   setTimeout(() => {
     const myName = name.split("");
@@ -9,11 +10,12 @@ function TypeWriter(name) {
     myName.forEach((letter, index) => {
       setTimeout(function () {
         fullName.innerHTML += letter;
-      }, 150 * index);
+      }, 100 * index);
     });
-  }, 1500);
+  }, 1000);
 }
 
+//Copy Button
 document.getElementById("botao-copiar").addEventListener("click", function () {
   var copyText = document.getElementById("texto-copiado");
   var transferArea = document.createElement("textarea");
