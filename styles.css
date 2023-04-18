@@ -52,16 +52,6 @@ h2 {
   animation: blink 0.7s infinite;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 .subtitle {
   width: 100%;
   height: 15vw;
@@ -213,6 +203,10 @@ figcaption {
 }
 /*PHOTOS END*/
 
+.contact-title {
+  font-family: Poppins, sans-serif;
+}
+
 .social-media a {
   font-size: 1.6rem;
   margin: 0 2vw;
@@ -264,6 +258,16 @@ figcaption {
 
 .bold {
   font-weight: 600;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @media only screen and (max-width: 1050px) {

@@ -1,5 +1,6 @@
 const fullName = document.querySelector(".main-title");
 const nameComplete = fullName.innerHTML;
+fullName.innerHTML = "";
 
 function TypeWriter(name) {
   setTimeout(() => {
