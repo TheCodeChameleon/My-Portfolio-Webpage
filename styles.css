@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --background-color1: #4b167e;
   --background-color2: linear-gradient(62deg, #000000 0%, #282a3a 100%);
@@ -95,17 +96,33 @@ h2 {
   margin-left: 6px;
   margin-right: 6px;
   width: 8rem;
-  border-right: 1px solid var(--font-color1);
-  font-size: max(1.2rem, 18px);
-}
-
-#itens:last-of-type {
-  border-right: none;
+  font-size: 18px;
 }
 
 #navbar a {
   text-decoration: none;
   color: var(--font-color1);
+  transition: 0.5s;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+
+#navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--font-color1);
+  transition: width 0.3s ease-in-out;
+}
+
+#navbar a:hover::after {
+  width: 100%;
 }
 
 .imglogo {
@@ -157,9 +174,8 @@ h2 {
   color: #0d172a;
   cursor: pointer;
   display: inline-block;
-  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Poppins";
+  text-transform: uppercase;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
@@ -312,6 +328,45 @@ figcaption {
   font-weight: bold;
   margin-top: 10%;
 }
+
+.moreDiv {
+  margin-top: 100px;
+  display: block;
+  align-items: center;
+  width: 100%;
+}
+
+.moreBtn {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.moreBtn a {
+  text-decoration: none;
+  color: var(--background-color3);
+}
+
+.moreBtn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
+
 /*PHOTOS END*/
 /* CONTACT SECTION */
 .contact-title {
@@ -426,9 +481,6 @@ figcaption {
   .social-media a:hover {
     transform: translateY(0);
   }
-  #itens {
-    border: none;
-  }
   .email:hover::after {
     content: "";
   }
@@ -438,6 +490,10 @@ figcaption {
 
   .imgMe {
     width: 50%;
+  }
+
+  #itens {
+    display: none;
   }
 }
 @media only screen and (max-width: 395px) {
