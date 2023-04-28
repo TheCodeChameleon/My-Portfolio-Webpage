@@ -421,6 +421,11 @@ figcaption {
   opacity: 50%;
 }
 
+.email:active::after {
+  content: "Copied!";
+  opacity: 50%;
+}
+
 .emailId {
   font-style: normal;
   font-weight: 400;
@@ -494,6 +499,9 @@ figcaption {
 
   #itens {
     display: none;
+  }
+  .moreDiv {
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 395px) {
